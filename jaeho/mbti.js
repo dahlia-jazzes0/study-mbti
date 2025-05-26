@@ -19,12 +19,31 @@ const getMbtiValue = () => {
   });
 };
 
-const getUserData = sessionStorage.getItem(USER_DATA);
+const haveUserData = sessionStorage.getItem(USER_DATA);
 
 const readMbtiValue = () => {
-  userData = JSON.parse(getUserData);
+  userData = JSON.parse(haveUserData);
 };
 
-if (getUserData !== null) {
+if (haveUserData !== null) {
   readMbtiValue();
 }
+
+const userDataCheck = () => {
+  if (userData.length === 4) {
+    const isNull = userData.includes(null);
+
+    if (isNull) {
+      alert("처음부터 다시 해주세요!");
+      sessionStorage.removeItem(USER_DATA);
+      location.href = "index.html";
+      return;
+    }
+    const userMbti = userData.join("");
+    const result = `${userMbti}.html`;
+
+    location.href = result;
+  }
+};
+
+userDataCheck();
