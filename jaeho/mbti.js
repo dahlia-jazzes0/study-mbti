@@ -2,22 +2,20 @@ const USER_DATA = "userdata";
 let links;
 
 document.addEventListener("DOMContentLoaded", () => {
-  links = document.querySelectorAll(".answer-box a");
+  links = document.querySelector(".answer-box");
   getMbtiValue();
 });
 
 let userData = [];
 
 const getMbtiValue = () => {
-  links.forEach(link => {
-    link.addEventListener("click", e => {
-      const data = JSON.parse(link.dataset.value);
-      const index = data.index;
-      const mbti = data.mbti;
+  links.addEventListener("click", e => {
+    const data = JSON.parse(e.target.dataset.value);
+    const index = data.index;
+    const mbti = data.mbti;
 
-      userData[index] = mbti;
-      sessionStorage.setItem(USER_DATA, JSON.stringify(userData));
-    });
+    userData[index] = mbti;
+    sessionStorage.setItem(USER_DATA, JSON.stringify(userData));
   });
 };
 
