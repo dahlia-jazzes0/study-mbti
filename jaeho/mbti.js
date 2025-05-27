@@ -1,20 +1,20 @@
 const USER_DATA = "userdata";
-let links;
+let answers;
 
 document.addEventListener("DOMContentLoaded", () => {
-  links = document.querySelector(".answer-box");
+  answers = document.querySelector(".answer-box");
   getMbtiValue();
 });
 
 let userData = [];
 
 const getMbtiValue = () => {
-  links.addEventListener("click", e => {
-    const data = JSON.parse(e.target.dataset.value);
-    const index = data.index;
-    const mbti = data.mbti;
+  answers.addEventListener("click", e => {
+    const data = e.target.dataset;
+    const id = data.questionId;
+    const value = data.value;
 
-    userData[index] = mbti;
+    userData[id] = value;
     sessionStorage.setItem(USER_DATA, JSON.stringify(userData));
   });
 };
@@ -29,21 +29,57 @@ if (haveUserData !== null) {
   readMbtiValue();
 }
 
-const userDataCheck = () => {
-  if (userData.length === 4) {
-    const isNull = userData.includes(null);
+const deleteUserData = () => {
+  sessionStorage.removeItem(USER_DATA);
+};
 
-    if (isNull) {
+const getUrl = src => {
+  return (location.href = src);
+};
+
+const validCheck = data => {
+  const validResults = [
+    "ISTJ",
+    "ISTP",
+    "ISFJ",
+    "ISFP",
+    "INTJ",
+    "INTP",
+    "INFJ",
+    "INFP",
+    "ESTJ",
+    "ESTP",
+    "ESFJ",
+    "ESFP",
+    "ENTJ",
+    "ENTP",
+    "ENFJ",
+    "ENFP",
+  ];
+  const valid = validResults.includes(data);
+
+  return valid;
+};
+
+const getResultPage = mbti => {
+  const result = `../${mbti}.html`;
+
+  getUrl(result);
+};
+
+const checkUserData = () => {
+  const userMbti = userData.join("");
+
+  if (userData.length === 4) {
+    if (!validCheck(userMbti)) {
       alert("처음부터 다시 해주세요!");
-      sessionStorage.removeItem(USER_DATA);
-      location.href = "index.html";
+      deleteUserData();
+      getUrl("index.html");
       return;
     }
-    const userMbti = userData.join("");
-    const result = `${userMbti}.html`;
 
-    location.href = result;
+    getResultPage(userMbti);
   }
 };
 
-userDataCheck();
+checkUserData();
