@@ -96,7 +96,6 @@ body {
 
 /* utilities */
 .highlight {
-  display: inline-block;
   background: linear-gradient(to right, transparent 50%, #77fd9070 50%);
   background-size: 200%;
 }
