@@ -1,0 +1,204 @@
+@import "./reset.css";
+
+*,
+*::before,
+*::after{
+    box-sizing : border-box;
+}
+
+.sr-only {
+    position: absolute;
+    left: -9999px;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #FFDEDE;
+    background: radial-gradient(circle at 50% 110%, #CF0F47, #000000 70%);
+    font-family: GongGothicMedium;
+}
+
+/* head.css */
+.istp {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 300px;
+    height: 300px;
+    margin: 40px auto 0;
+    border-radius: 20px;
+    background-color: #FFDEDE;
+    box-shadow: 5px 5px 20px rgba(0,0,0,0.3);
+}
+
+.istp-title {
+    margin-top: 11px;
+    padding: 4px 20px;
+    border-radius: 8px;
+    box-shadow: 3px 3px 3px rgba(0,0,0,0.3);
+    font-size: 20px;
+    color: #CF0F47;
+    background-color: #000000;
+    font-family: PyeongChangPeace-Bold;
+}
+
+.istp-sub {
+    margin-top: 7px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 10px;
+    color: #000000;
+}
+
+.istp-sub::after {
+    content: '';
+    display: block;
+    width: 90%;
+    height: 1px;
+    background-color: #FFDEDE;
+    margin-top: 15px;
+}
+
+
+.istp-character {
+    position: relative;
+    width: 230px; 
+    height: 230px; 
+    margin: 0 auto;
+}
+
+.istp-img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    z-index: 0;
+    animation: showOne 3s infinite steps(1);
+}
+
+.istp-img:nth-child(1) {
+    animation-delay: 0s;
+}
+.istp-img:nth-child(2) {
+    animation-delay: 1s;
+}
+.istp-img:nth-child(3) {
+    animation-delay: 2s;
+}
+
+@keyframes showOne {
+    0% {
+    opacity: 1;
+    z-index: 1;
+    }
+    33.33% {
+    opacity: 0;
+    z-index: 0;
+    }
+    100% {
+    opacity: 0;
+    z-index: 0;
+    }
+}
+
+/* main.css */
+.speechBubble {
+    margin: 40px 0;
+}
+
+.speechBubble-work1,
+.speechBubble-work2 {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.bubble-container {
+    position: relative;
+    display: inline-block;
+    width: 140px;
+    height: auto;
+}
+
+.bubble-container img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.bubble-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -85%); 
+    z-index: 2;
+    font-size: 15px;
+    font-weight: bold;
+    white-space: nowrap;
+    display: flex;
+    align-items: center;
+}
+
+.bubble-text .hash {
+    color: #CF0F47;
+    margin-right: 3px;
+}
+
+.bubble-text .text {
+    color: #000000;
+}
+
+
+.description {
+    margin: 20px 0;
+    padding: 25px;
+    width: 300px;
+    border-radius: 15px;
+    text-align: center;
+    line-height: 1.6;
+    font-size: 12px;
+    color: #FFDEDE;
+    border: 2px solid #CF0F47;
+    background-color: rgba(232, 252, 246, 0.1);
+    box-shadow: 5px 5px 20px rgba(0,0,0,0.3);
+}
+
+/* footer.css */
+.link {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    padding: 0;
+    margin: 0;
+}
+
+.link-li1,
+.link-li2{
+    margin: 50px auto 50px 0;
+    padding: 4px 20px;
+    border-radius: 8px;
+    box-shadow: 5px 5px 20px rgba(0,0,0,0.3);
+    font-size: 20px;
+    background-color: #CF0F47;
+    font-family: PyeongChangPeace-Bold;
+}
+
+.link-home,
+.link-share{
+    color: #000000;
+    text-decoration: none;
+}
