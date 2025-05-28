@@ -1,0 +1,147 @@
+/* 전체 배경과 폰트 */
+body {
+  background-color: #fffdf8;
+  font-family: "Pretendard", "Noto Sans KR", sans-serif;
+  color: #333;
+}
+
+/* 메인 영역 정렬 */
+main {
+  margin: 60px auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* 카드 스타일 */
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 50px 30px;
+  border: 2px solid #b6a8f9;
+  border-radius: 30px;
+  background-color: #f4f1ff;
+  box-shadow: 0 8px 24px rgba(90, 78, 209, 0.1);
+  position: relative;
+}
+
+/* 상단 장식 */
+.container::before {
+  content: "🌟";
+  position: absolute;
+  top: 40px;
+  left: 110px;
+  font-size: 80px;
+  animation: twinkle 2s infinite alternate;
+}
+.container::after {
+  content: "🌟";
+  position: absolute;
+  top: 40px;
+  left: 365px;
+  font-size: 80px;
+  animation: twinkle 2s infinite alternate;
+}
+
+/* 애니메이션 효과 */
+@keyframes twinkle {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(15deg);
+    opacity: 1;
+  }
+}
+
+/* 타이틀 */
+.title {
+  font-size: 64px;
+  font-weight: 800;
+  color: #5a4ed1;
+  margin-bottom: 40px;
+  position: relative;
+}
+
+/* 이미지 영역 */
+.image-wapper {
+  width: 300px;
+  height: 300px;
+  margin-bottom: 40px;
+  background-color: #e8e5ff;
+  border-radius: 16px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 12px rgba(90, 78, 209, 0.15);
+}
+
+img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+/* 주요 특징 */
+.character {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 30px;
+  font-size: 18px;
+  font-weight: 600;
+  color: #5a4ed1;
+}
+
+.character > p:first-child {
+  margin-bottom: 12px;
+}
+
+/* 설명 리스트 */
+.description {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.description > li {
+  background-color: #fff;
+  padding: 10px 14px;
+  border-left: 4px solid #b6a8f9;
+  border-radius: 6px;
+  font-size: 15px;
+  color: #4b41a8;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
+  transition: background-color 0.3s ease;
+}
+
+.description > li:hover {
+  background-color: #f3efff;
+}
+
+.action {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 40px;
+  padding: 10px;
+  gap: 30px;
+}
+
+.action > a,
+.action > button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100px;
+  height: 40px;
+
+  font-size: 20px;
+  color: #5a4ed1;
+  border: 2px solid #b6a8f9;
+  border-radius: 10px;
+}
