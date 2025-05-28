@@ -53,6 +53,11 @@ main {
   width: 30vw;
 }
 
+.entp-img,
+.enfp-img  {
+  width: 35vw;
+}
+
 .description h3{
   color: #555;
   font-size: 14px;
@@ -101,3 +106,24 @@ footer ul li a{
   border-radius: 10px;
 }
 
+.entp-body {
+  background-color: rgb(221, 158, 255);
+}
+
+.entp-footer li {
+  background-color: rgb(221, 37, 255);
+  padding: 10px 20px;
+  list-style: none;
+  border-radius: 10px;
+}
+
+.enfp-body {
+  background-color: rgb(255, 158, 237);
+}
+
+.enfp-footer li {
+  background-color: rgb(255, 37, 240);
+  padding: 10px 20px;
+  list-style: none;
+  border-radius: 10px;
+}
