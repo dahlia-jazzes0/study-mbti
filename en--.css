@@ -1,0 +1,97 @@
+body {
+  width: 100vw;
+  height: 100vh;
+  background-color: rgb(255, 235, 239);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.wrapper {
+  width: 80%;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10%;
+
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+header,
+main {
+  border-bottom: solid 1px #ccc;
+  padding-bottom: 10px;
+}
+
+header h1{
+  margin-left: 10px;
+  font-size: 18px;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  padding-left: 30px;
+}
+
+.description {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+
+.description h2 {
+  font-size: 30px;
+  font-weight: 700;
+}
+
+.entj-img {
+  width: 30vw;
+}
+
+.description h3{
+  color: #555;
+  font-size: 14px;
+}
+
+.character h2,
+.recommend div h2 {
+  font-weight: 700;
+  font-size: 18px;
+  margin: 10px 0;
+}
+
+.character ul,
+.recommend{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 5px;
+}
+
+footer {
+  margin: 0 auto;
+}
+
+footer ul{
+  display: flex;
+  list-style: none;
+  gap: 20px;
+}
+
+footer ul li {
+  background-color: pink;
+  padding: 10px 20px;
+  list-style: none;
+  border-radius: 10px;
+}
+
+footer ul li a{
+  font-size: 20px;
+  font-weight: 700;
+  color: #fff;
+}
