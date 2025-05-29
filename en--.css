@@ -1,5 +1,6 @@
 body {
-  width: 100vw;
+  /* width: 100vw; */
+  max-width: 414px;
   height: 100vh;
   display: flex;
   flex-direction: column;
@@ -11,7 +12,7 @@ body {
   width: 80%;
   background-color: #fff;
   padding: 20px;
-  border-radius: 10%;
+  border-radius: 50px;
 
   display: flex;
   flex-direction: column;
@@ -33,7 +34,7 @@ main {
   display: flex;
   flex-direction: column;
   gap: 30px;
-  padding-left: 30px;
+  list-style-position: inside;
 }
 
 .description {
@@ -50,12 +51,12 @@ main {
 }
 
 .entj-img {
-  width: 30vw;
+  width: 50%;
 }
 
 .entp-img,
 .enfp-img  {
-  width: 35vw;
+  width: 60%;
 }
 
 .description h3{
@@ -63,15 +64,14 @@ main {
   font-size: 14px;
 }
 
-.character h2,
-.recommend div h2 {
+.main-box h2{
   font-weight: 700;
   font-size: 18px;
   margin: 10px 0;
 }
 
-.character ul,
-.recommend{
+.main-box > ul,
+.main-box:last-child {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 5px;
@@ -92,7 +92,6 @@ footer ul li a{
   font-weight: 700;
   color: #fff;
 }
-
 
 /* 각 mbti 배경/footer 색 변경 */
 .entj-body {
