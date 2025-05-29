@@ -9,9 +9,9 @@ body {
 }
 
 .wrapper {
-  width: 80%;
   background-color: #fff;
-  padding: 20px;
+  padding: 40px;
+  margin: 20px;
   border-radius: 50px;
 
   display: flex;
@@ -22,7 +22,7 @@ body {
 header,
 main {
   border-bottom: solid 1px #ccc;
-  padding-bottom: 10px;
+  padding-bottom: 20px;
 }
 
 header h1{
@@ -64,17 +64,22 @@ main {
   font-size: 14px;
 }
 
-.main-box h2{
+.character h2,
+.recommend h2{
   font-weight: 700;
   font-size: 18px;
   margin: 10px 0;
 }
 
-.main-box > ul,
-.main-box:last-child {
+.character > ul,
+.recommend {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 5px;
+}
+
+.recommend section ul li{
+  margin-top: 5px;
 }
 
 footer {
