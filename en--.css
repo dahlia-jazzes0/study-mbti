@@ -1,11 +1,11 @@
 body {
-  /* width: 100vw; */
   max-width: 414px;
   height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  margin: 0 auto;
 }
 
 .wrapper {
