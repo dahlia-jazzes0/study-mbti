@@ -1,16 +1,6 @@
-const USER_DATA = "userdata";
-
 function deleteUserData() {
+  const USER_DATA = "userdata";
   sessionStorage.removeItem(USER_DATA);
 }
 
-const checkData = () => {
-  const haveUserData = sessionStorage.getItem(USER_DATA);
-  const parsedUserData = JSON.parse(haveUserData);
-
-  if (parsedUserData == null) return;
-
-  deleteUserData();
-};
-
-checkData();
+deleteUserData();

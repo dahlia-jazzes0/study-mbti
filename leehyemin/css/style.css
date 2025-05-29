@@ -1,111 +1,111 @@
 /* -----------------------------------------------
-  fonts
+    fonts
 --------------------------------------------------*/
 @font-face {
-  font-family: "Cafe24Danjunghae";
-  src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_twelve@1.1/Cafe24Danjunghae.woff")
-    format("woff");
-  font-weight: normal;
-  font-style: normal;
+    font-family: "Cafe24Danjunghae";
+    src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_twelve@1.1/Cafe24Danjunghae.woff")
+        format("woff");
+    font-weight: normal;
+    font-style: normal;
 }
 
 @font-face {
-  font-family: "KOTRA_BOLD-Bold";
-  src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_20-10-21@1.1/KOTRA_BOLD-Bold.woff")
-    format("woff");
-  font-weight: normal;
-  font-style: normal;
+    font-family: "KOTRA_BOLD-Bold";
+    src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_20-10-21@1.1/KOTRA_BOLD-Bold.woff")
+        format("woff");
+    font-weight: normal;
+    font-style: normal;
 }
 
 @font-face {
-  font-family: "Pretendard-Bold";
-  src: url("https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Bold.woff")
-    format("woff");
-  font-weight: 700;
-  font-style: normal;
+    font-family: "Pretendard-Bold";
+    src: url("https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Bold.woff")
+        format("woff");
+    font-weight: 700;
+    font-style: normal;
 }
 
 @font-face {
-  font-family: "Dovemayo-Medium";
-  src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_four@1.0/Dovemayo-Medium.woff")
-    format("woff");
-  font-weight: normal;
-  font-style: normal;
+    font-family: "Dovemayo-Medium";
+    src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_four@1.0/Dovemayo-Medium.woff")
+        format("woff");
+    font-weight: normal;
+    font-style: normal;
 }
 
 /* -----------------------------------------------
-  시각적 숨김 처리
+    시각적 숨김 처리
 --------------------------------------------------*/
 .sr-only {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  overflow: hidden;
-  clip: rect(0, 0, 0, 0);
-  clip-path: polygon(0 0, 0 0, 0 0);
-  white-space: nowrap;
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    clip-path: polygon(0 0, 0 0, 0 0);
+    white-space: nowrap;
 }
 
 /* -----------------------------------------------
-  기본 설정값
+    기본 설정값
 --------------------------------------------------*/
 
 :root {
-  --tit-color: #000;
-  --txt-color: #744900;
-  --mbti-color: #f0a600;
-  --box-border-color: #ffc951;
+    --tit-color: #000;
+    --txt-color: #744900;
+    --mbti-color: #f0a600;
+    --box-border-color: #ffc951;
 
-  --tit-size: 3rem;
-  --txt-size: 1.19rem;
-  --mbti-size: 3.5rem;
-  --btn-size: 1.75rem;
+    --tit-size: 3rem;
+    --txt-size: 1.19rem;
+    --mbti-size: 3.5rem;
+    --btn-size: 1.75rem;
 }
 
 /* -----------------------------------------------
-  공통 스타일
+    공통 스타일
 --------------------------------------------------*/
 button {
-  position: relative;
-  display: inline-block;
-  margin-bottom: 1.9rem;
-  font-family: Cafe24Danjunghae;
-  font-size: var(--btn-size);
+    position: relative;
+    display: inline-block;
+    margin-bottom: 1.9rem;
+    font-family: Cafe24Danjunghae;
+    font-size: var(--btn-size);
 }
 
 button:hover {
-  color: var(--txt-color);
+    color: var(--txt-color);
 }
 
 .content-header {
-  position: fixed;
-  top: 0;
-  text-align: center;
-  z-index: 100;
+    position: fixed;
+    top: 0;
+    text-align: center;
+    z-index: 100;
 }
 
 .wrap-titbg {
-  position: relative;
+    position: relative;
 }
 
 .wrap-tit-txt {
-  position: absolute;
-  top: 2.2rem;
-  left: 4.6rem;
+    position: absolute;
+    top: 2.2rem;
+    left: 4.6rem;
 }
 
 .tit-sup {
-  margin-bottom: 0.3rem;
-  color: #ff8749;
-  font-family: Dovemayo-Medium;
-  font-size: 1.4rem;
-  font-weight: bold;
+    margin-bottom: 0.3rem;
+    color: #ff8749;
+    font-family: Dovemayo-Medium;
+    font-size: 1.4rem;
+    font-weight: bold;
 }
 
 .tit-result {
-  font-family: Cafe24Danjunghae;
-  font-size: var(--tit-size);
+    font-family: Cafe24Danjunghae;
+    font-size: var(--tit-size);
 }
 
 .tit-sup-M { color: #ff5757; }
@@ -114,185 +114,185 @@ button:hover {
 .tit-sup-I { color: #5bdf2e; }
 
 .content-main {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 
-  margin-top: 11rem;
+    margin-top: 11rem;
 }
 
 .wrap-main-content {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .txt-mbti {
-  color: var(--mbti-color);
-  font-family: KOTRA_BOLD-Bold;
-  font-size: var(--mbti-size);
+    color: var(--mbti-color);
+    font-family: KOTRA_BOLD-Bold;
+    font-size: var(--mbti-size);
 }
 
 .wrap-mbti-desc {
-  display: inline-block;
-  text-align: center;
+    display: inline-block;
+    text-align: center;
 }
 
 .txt-mbti-desc {
-  position: relative;
-  color: var(--txt-color);
-  text-align: center;
-  font-family: Pretendard-Bold;
-  font-size: 1.4rem;
+    position: relative;
+    color: var(--txt-color);
+    text-align: center;
+    font-family: Pretendard-Bold;
+    font-size: 1.4rem;
 }
 
 .desc-bg-img {
-  position: absolute;
-  top: 12.5rem;
-  width: 19rem;
-  height: auto;
-  z-index: -1;
+    position: absolute;
+    top: 12.5rem;
+    width: 19rem;
+    height: auto;
+    z-index: -1;
 }
 
 .wrap-speech {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-  width: 90%;
-  margin: 1rem auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 90%;
+    margin: 1rem auto;
 }
 
 .img-speech-bubble {
-  width: 80%;
-  opacity: 60%;
+    width: 80%;
+    opacity: 60%;
 }
 
 .txt-quote {
-  position: absolute;
-  top: 1.4rem;
-  color: var(--txt-color);
-  text-align: center;
-  font-family: Dovemayo-Medium;
-  font-weight: bold;
+    position: absolute;
+    top: 1.4rem;
+    color: var(--txt-color);
+    text-align: center;
+    font-family: Dovemayo-Medium;
+    font-weight: bold;
 }
 
 .img-mbti {
-  width: 95%;
-  margin-bottom: 20px;
+    width: 95%;
+    margin-bottom: 20px;
 }
 
 .main-txt-box {
-  width: 90%;
-  padding: 35px 15px;
-  margin-bottom: 40px;
-  text-align: left;
-  border: 5px solid var(--box-border-color);
-  background-color: rgba(255, 255, 255, 0.7);
+    width: 90%;
+    padding: 35px 15px;
+    margin-bottom: 40px;
+    text-align: left;
+    border: 5px solid var(--box-border-color);
+    background-color: rgba(255, 255, 255, 0.7);
 }
 
 .main-txt-box ul li {
-  color: var(--txt-color);
-  font-family: Dovemayo-Medium;
-  font-weight: bold;
-  line-height: 1.5rem;
+    color: var(--txt-color);
+    font-family: Dovemayo-Medium;
+    font-weight: bold;
+    line-height: 1.5rem;
 }
 
 .main-txt-box ul li::before {
-  content: "";
-  display: inline-block;
-  width: 0.7rem;
-  height: 0.7rem;
-  margin-right: 10px;
-  background: url(../img/star.png) no-repeat center / contain;
+    content: "";
+    display: inline-block;
+    width: 0.7rem;
+    height: 0.7rem;
+    margin-right: 10px;
+    background: url(../img/star.png) no-repeat center / contain;
 }
 
 .btn-box {
-  margin-bottom: 30px;
+    margin-bottom: 30px;
 }
 
 .wrap-btn {
-  display: flex;
-  flex-direction: column;
+    display: flex;
+    flex-direction: column;
 }
 
 .btn-with-bg .btn-bg {
-  position: absolute;
-  top: -0.1rem;
-  left: -2rem;
-  width: 16rem;
-  height: 3rem;
-  object-fit: cover;
-  z-index: -1;
-  pointer-events: none;
+    position: absolute;
+    top: -0.1rem;
+    left: -2rem;
+    width: 16rem;
+    height: 3rem;
+    object-fit: cover;
+    z-index: -1;
+    pointer-events: none;
 }
 
 .content-footer {
-  text-align: center;
+    text-align: center;
 }
 
 .footer-copyright {
-  color: var(--txt-color);
-  opacity: 0.5;
-  margin-bottom: 30px;
+    color: var(--txt-color);
+    opacity: 0.5;
+    margin-bottom: 30px;
 }
 
 .footer-copyright {
-  font-size: 0.8rem;
+    font-size: 0.8rem;
 }
 
 /* -----------------------------------------------
-  PC 전용 영역 (최소 415px)
+    PC 전용 영역 (최소 415px)
 --------------------------------------------------*/
 @media screen and (min-width: 415px) {
-  html {
+    html {
     width: 25.9rem;
     margin: 0 auto;
     font-size: 16px;
-  }
+    }
 
-  body {
+    body {
     margin: 0 auto;
     height: auto;
     background: url(../img/main_bg.png) top / 25.9rem 74rem no-repeat;
-  }
+    }
 
-  .wrap-titbg img {
+    .wrap-titbg img {
     width: 25.9rem;
-  }
+    }
 
-  .desc-bg-img {
+    .desc-bg-img {
     transform: translateX(-46%);
-  }
+    }
 
-  .wrap-speech {
+    .wrap-speech {
     width: 90%;
     margin: 1.25rem auto;
-  }
+    }
 }
 
 /* -----------------------------------------------
-  모바일 전용 영역 (최대 414px)
+    모바일 전용 영역 (최대 414px)
 --------------------------------------------------*/
 @media screen and (max-width: 414px) {
 
-  html {
+    html {
     font-size: calc(100vw / 414 * 16);
-  }
+    }
 
-  body {
+    body {
     background: url(../img/main_bg.png) top / cover no-repeat;
-  }
+    }
 
-  .wrap-titbg img {
+    .wrap-titbg img {
     width: 100%;
-  }
+    }
 
-  .desc-bg-img {
+    .desc-bg-img {
     transform: translateX(-50%);
     left: 53%;
-  }
+    }
 }

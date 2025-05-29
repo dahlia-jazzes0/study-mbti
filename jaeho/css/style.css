@@ -27,24 +27,6 @@ main {
   position: relative;
 }
 
-/* 상단 장식 */
-.container::before {
-  content: "🌟";
-  position: absolute;
-  top: 40px;
-  left: 110px;
-  font-size: 80px;
-  animation: twinkle 2s infinite alternate;
-}
-.container::after {
-  content: "🌟";
-  position: absolute;
-  top: 40px;
-  left: 365px;
-  font-size: 80px;
-  animation: twinkle 2s infinite alternate;
-}
-
 /* 애니메이션 효과 */
 @keyframes twinkle {
   0% {
@@ -63,6 +45,24 @@ main {
   color: #5a4ed1;
   margin-bottom: 40px;
   position: relative;
+}
+
+/* 상단 장식 */
+.title::before {
+  content: "🌟";
+  position: absolute;
+  top: -7px;
+  left: -100px;
+  font-size: 80px;
+  animation: twinkle 2s infinite alternate;
+}
+.title::after {
+  content: "🌟";
+  position: absolute;
+  top: -7px;
+  left: 145px;
+  font-size: 80px;
+  animation: twinkle 2s infinite alternate;
 }
 
 /* 이미지 영역 */

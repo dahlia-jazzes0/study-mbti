@@ -1,43 +1,37 @@
-const USER_DATA = "userdata";
-let answers;
-
-document.addEventListener("DOMContentLoaded", () => {
-  answers = document.querySelector(".answer-box");
-  getMbtiValue();
-});
+const USER_DATA_KEY = "userdata";
 
 let userData = [];
 
-const getMbtiValue = () => {
+document.addEventListener("DOMContentLoaded", () => {
+  const answers = document.querySelector(".answer-box");
+
   answers.addEventListener("click", e => {
-    const data = e.target.dataset;
-    const id = data.questionId;
-    const value = data.value;
+    const { questionId, value } = e.target.dataset;
 
-    userData[id] = value;
-    sessionStorage.setItem(USER_DATA, JSON.stringify(userData));
+    userData[questionId] = value;
+    sessionStorage.setItem(USER_DATA_KEY, JSON.stringify(userData));
   });
+});
+
+const loadUserData = () => {
+  const userDataAlreadyHave = sessionStorage.getItem(USER_DATA_KEY);
+
+  if (userDataAlreadyHave !== null) {
+    return (userData = JSON.parse(userDataAlreadyHave));
+  }
 };
 
-const haveUserData = sessionStorage.getItem(USER_DATA);
-
-const readMbtiValue = () => {
-  userData = JSON.parse(haveUserData);
-};
-
-if (haveUserData !== null) {
-  readMbtiValue();
-}
+loadUserData();
 
 const deleteUserData = () => {
-  sessionStorage.removeItem(USER_DATA);
+  sessionStorage.removeItem(USER_DATA_KEY);
 };
 
-const getUrl = src => {
-  return (location.href = src);
+const navigateTo = url => {
+  return (location.href = url);
 };
 
-const validCheck = data => {
+const isValidMbti = data => {
   const validResults = [
     "ISTJ",
     "ISTP",
@@ -62,19 +56,20 @@ const validCheck = data => {
 };
 
 const getResultPage = mbti => {
-  const result = `../${mbti}.html`;
+  const result = `../${mbti.toLowerCase()}.html`;
 
-  getUrl(result);
+  navigateTo(result);
 };
 
 const checkUserData = () => {
-  const userMbti = userData.join("").toLowerCase();
+  const userMbti = userData.join("");
+  const EXPECTED_ANSWER_COUNT = 4;
 
-  if (userData.length === 4) {
-    if (!validCheck(userMbti)) {
+  if (userData.length === EXPECTED_ANSWER_COUNT) {
+    if (!isValidMbti(userMbti)) {
       alert("처음부터 다시 해주세요!");
       deleteUserData();
-      getUrl("index.html");
+      navigateTo("index.html");
       return;
     }
 
