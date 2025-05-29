@@ -32,7 +32,7 @@ const navigateTo = url => {
 };
 
 const isValidMbti = data => {
-  const validResults = [
+  const validMbti = [
     "ISTJ",
     "ISTP",
     "ISFJ",
@@ -50,7 +50,7 @@ const isValidMbti = data => {
     "ENFJ",
     "ENFP",
   ];
-  const valid = validResults.includes(data);
+  const valid = validMbti.includes(data);
 
   return valid;
 };
