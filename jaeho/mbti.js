@@ -55,10 +55,10 @@ const isValidMbti = data => {
   return valid;
 };
 
-const getResultPage = mbti => {
-  const result = `../${mbti.toLowerCase()}.html`;
+const navigateToResultPage = mbti => {
+  const resultPage = `../${mbti.toLowerCase()}.html`;
 
-  navigateTo(result);
+  navigateTo(resultPage);
 };
 
 const checkUserData = () => {
@@ -73,7 +73,7 @@ const checkUserData = () => {
       return;
     }
 
-    getResultPage(userMbti);
+    navigateToResultPage(userMbti);
     return;
   }
 };
