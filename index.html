@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>나의 개발 스타일을 알아보자!</title>
+
+  <link rel="stylesheet" href="./parkdasom/css/reset.css">
+  <link rel="stylesheet" href="./parkdasom/css/style.css">
+
+</head>
+
+<body>
+  <audio id="bg-music" src="./parkdasom/mbti-test-audio.mp3" loop></audio>
+
+  <div class="web-box">
+    <h1 class="logo"><img src="./parkdasom/img-index/logo-index.png" alt="" aria-hidden="true" />
+      <span class="sr-only">나의 개발 MBTI 알아보기</span>
+    </h1>
+
+    <button id="music-button">
+      <img id="music-icon" src="./parkdasom/img-index/speaker-on.png" alt="음악종료" width="32">
+      <span id="music-text"></span>
+    </button>
+
+    <div class="start-btn-wrapper">
+      <a href="#" class="start-btn">START</a>
+    </div>
+  
+    <img src="./parkdasom/img-index/hover.png" alt="아래 캐릭터에 마우스를 올려보세요" class="hover-text">
+
+  <section class="image-grid">
+      <button class="mbti-card">
+        <img src="./parkdasom/img-index/intp-index.png" alt="INTP">
+        <p class="mbti-desc">INTP <br> 논리적 사색가, 분석과 아이디어 탐구를 즐김</p>
+      </button>
+      <button class="mbti-card">
+        <img src="./parkdasom/img-index/intj-index.png" alt="INTJ">
+        <p class="mbti-desc">INTJ <br> 전략가, 장기적인 계획 수립의 달인</p>
+      </button>
+      <button class="mbti-card">
+        <img src="./parkdasom/img-index/entp-index.png" alt="ENTP">
+        <p class="mbti-desc">ENTP <br> 토론가, 재치 있고 논리적인 발명가</p>
+      </button>
+      <button class="mbti-card">
+        <img src="./parkdasom/img-index/infp-index.png" alt="INFP">
+        <p class="mbti-desc">INFP <br> 중재자, 내면의 가치와 이상을 중시함</p>
+      </button>
+      <button class="mbti-card">
+        <img src="./parkdasom/img-index/infj-index.png" alt="INFJ">
+        <p class="mbti-desc">INFJ <br> 옹호자, 타인을 돕는 데에 열정을 가짐</p>
+      </button>
+      <button class="mbti-card">
+        <img src="./parkdasom/img-index/enfp-index.png" alt="ENFP">
+        <p class="mbti-desc">ENFP <br> 열정적인 활동가, 창의력과 에너지 넘침</p>
+      </button>
+      <button class="mbti-card">
+        <img src="./parkdasom/img-index/enfj-index.png" alt="ENFJ">
+        <p class="mbti-desc">ENFJ <br> 정의로운 사회운동가, 타인을 이끄는 리더</p>
+      </button>
+      <button class="mbti-card">
+        <img src="./parkdasom/img-index/entj-index.png" alt="ENTJ">
+        <p class="mbti-desc">ENTJ <br> 대담한 지휘관, 체계적으로 목표를 추진함</p>
+      </button>
+      <button class="mbti-card">
+        <img src="./parkdasom/img-index/isfp-index.png" alt="ISFP">
+        <p class="mbti-desc">ISFP <br> 호기심 많은 예술가, 감성적이고 따뜻함</p>
+      </button>
+      <button class="mbti-card">
+        <img src="./parkdasom/img-index/isfj-index.png" alt="ISFJ">
+        <p class="mbti-desc">ISFJ <br> 수호자, 책임감 있고 헌신적</p>
+      </button>
+      <button class="mbti-card">
+        <img src="./parkdasom/img-index/istp-index.png" alt="ISTP">
+        <p class="mbti-desc">ISTP <br> 만능 재주꾼, 논리적이고 실용적</p>
+      </button>
+      <button class="mbti-card">
+        <img src="./parkdasom/img-index/istj-index.png" alt="ISTJ">
+        <p class="mbti-desc">ISTJ <br> 청렴결백한 논리주의자, 현실적이고 조직적</p>
+      </button>
+      <button class="mbti-card">
+        <img src="./parkdasom/img-index/esfp-index.png" alt="ESFP">
+        <p class="mbti-desc">ESFP <br> 자유로운 영혼의 연예인, 인생을 즐김</p>
+      </button>
+      <button class="mbti-card">
+        <img src="./parkdasom/img-index/esfj-index.png" alt="ESFJ">
+        <p class="mbti-desc">ESFJ <br> 사교적인 외교관, 따뜻하고 협력적</p>
+      </button>
+      <button class="mbti-card">
+        <img src="./parkdasom/img-index/estp-index.png" alt="ESTP">
+        <p class="mbti-desc">ESTP <br> 모험을 즐기는 사업가, 실용적이고 활기참</p>
+      </button>
+      <button class="mbti-card">
+        <img src="./parkdasom/img-index/estj-index.png" alt="ESTJ">
+        <p class="mbti-desc">ESTJ <br> 엄격한 관리자, 원칙적이고 책임감 강함</p>
+      </button>
+    </section>
+  </div>
+
+  
+
+  <!-- 오디오 버튼js, 추후 수정 -->
+    <script>
+    const music = document.getElementById("bg-music");
+    const button = document.getElementById("music-button");
+    const icon = document.getElementById("music-icon");
+    const text = document.getElementById("music-text");
+    let isPlaying = true;
+
+    // 처음에 자동 재생
+    music.play();
+
+    button.addEventListener("click", () => {
+      if (isPlaying) {
+        music.pause();
+        icon.src = "./parkdasom/img-index/speaker-off.png";
+        text.textContent = "";
+      } else {
+        music.play();
+        icon.src = "./parkdasom/img-index/speaker-on.png";
+        text.textContent = "";
+      }
+      isPlaying = !isPlaying;
+    });
+  </script>
+
+</body>
+</html>
