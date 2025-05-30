@@ -17,7 +17,7 @@ const loadUserData = () => {
   const userDataAlreadyHave = sessionStorage.getItem(USER_DATA_KEY);
 
   if (userDataAlreadyHave !== null) {
-    return (userData = JSON.parse(userDataAlreadyHave));
+    userData = JSON.parse(userDataAlreadyHave);
   }
 };
 
@@ -28,7 +28,7 @@ const deleteUserData = () => {
 };
 
 const navigateTo = url => {
-  return (location.href = url);
+  location.href = url;
 };
 
 const isValidMbti = data => {
