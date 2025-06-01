@@ -1,0 +1,133 @@
+body {
+  max-width: 414px;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+.wrapper {
+  background-color: #fff;
+  padding: 40px;
+  margin: 20px;
+  border-radius: 50px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+header,
+main {
+  border-bottom: solid 1px #ccc;
+  padding-bottom: 20px;
+}
+
+header h1{
+  margin-left: 10px;
+  font-size: 18px;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  list-style-position: inside;
+}
+
+.description {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+
+.description h2 {
+  font-size: 30px;
+  font-weight: 700;
+}
+
+.entj-img {
+  width: 50%;
+}
+
+.entp-img,
+.enfp-img  {
+  width: 60%;
+}
+
+.description h3{
+  color: #555;
+  font-size: 14px;
+}
+
+.character h2,
+.recommend h2{
+  font-weight: 700;
+  font-size: 18px;
+  margin: 10px 0;
+}
+
+.character > ul,
+.recommend {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 5px;
+}
+
+.recommend section ul li{
+  margin-top: 5px;
+}
+
+footer {
+  margin: 0 auto;
+}
+
+footer ul{
+  display: flex;
+  list-style: none;
+  gap: 20px;
+}
+
+footer ul li a{
+  font-size: 20px;
+  font-weight: 700;
+  color: #fff;
+}
+
+/* 각 mbti 배경/footer 색 변경 */
+.entj-body {
+  background-color: rgb(255, 213, 158);
+}
+
+.entj-footer li {
+  background-color: rgb(255, 161, 37);
+  padding: 10px 20px;
+  list-style: none;
+  border-radius: 10px;
+}
+
+.entp-body {
+  background-color: rgb(221, 158, 255);
+}
+
+.entp-footer li {
+  background-color: rgb(221, 37, 255);
+  padding: 10px 20px;
+  list-style: none;
+  border-radius: 10px;
+}
+
+.enfp-body {
+  background-color: rgb(255, 158, 237);
+}
+
+.enfp-footer li {
+  background-color: rgb(255, 37, 240);
+  padding: 10px 20px;
+  list-style: none;
+  border-radius: 10px;
+}
