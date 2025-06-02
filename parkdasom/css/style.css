@@ -30,7 +30,7 @@
   height: 1000px;      
   margin: auto;
 
-  background-image: url('/parkdasom/img-index/background-index.png');
+  background-image: url('../img-index/background-index.png');
   background-position: center; 
   background-size: 393px 1000px;  
   background-repeat: no-repeat;
@@ -152,7 +152,7 @@ button {
   align-items: center;
   justify-content: center;
 
-  background-image: url('/parkdasom/img-index/bubble.png');
+  background-image: url('../img-index/bubble.png');
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
