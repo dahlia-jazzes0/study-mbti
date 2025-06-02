@@ -56,7 +56,7 @@ const isValidMbti = data => {
 };
 
 const navigateToResultPage = mbti => {
-  const resultPage = `../${mbti.toLowerCase()}.html`;
+  const resultPage = `${mbti.toLowerCase()}.html`;
 
   navigateTo(resultPage);
 };
